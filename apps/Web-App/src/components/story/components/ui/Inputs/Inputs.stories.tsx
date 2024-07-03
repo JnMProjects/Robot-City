@@ -22,18 +22,39 @@ export const PasswordInput = () => {
 
 export const OneTimePasswordInput = () => {
     return (
-        <Inputs.OTPWrapper maxLength={6} >
-            <Inputs.OTPGroup>
-                <Inputs.OTPSlot index={1} />
-                <Inputs.OTPSlot index={2} />
-                <Inputs.OTPSlot index={3} />
-            </Inputs.OTPGroup>
-            <Inputs.OTPSeperator />
-            <Inputs.OTPGroup>
-                <Inputs.OTPSlot index={4} />
-                <Inputs.OTPSlot index={5} />
-                <Inputs.OTPSlot index={6} />
-            </Inputs.OTPGroup>
-        </Inputs.OTPWrapper>
+        <form>
+            <Inputs.OTPWrapper maxLength={6} >
+                <Inputs.OTPGroup>
+                    <Inputs.OTPSlot index={1} />
+                    <Inputs.OTPSlot index={2} />
+                    <Inputs.OTPSlot index={3} />
+                </Inputs.OTPGroup>
+                <Inputs.OTPSeperator />
+                <Inputs.OTPGroup>
+                    <Inputs.OTPSlot index={4} />
+                    <Inputs.OTPSlot index={5} />
+                    <Inputs.OTPSlot index={6} />
+                </Inputs.OTPGroup>
+            </Inputs.OTPWrapper>
+        </form>
+    )
+}
+
+export const OTPUsedAsPinInput = () => {
+    return (
+        <form>
+            <Inputs.OTPWrapper maxLength={8} >
+                <Inputs.OTPGroup>
+                    <Inputs.OTPSlot index={1} />
+                    <Inputs.OTPSlot index={2} />
+                    <Inputs.OTPSlot index={3} />
+                    <Inputs.OTPSlot index={4} />
+                    <Inputs.OTPSlot index={5} />
+                    <Inputs.OTPSlot index={6} />
+                    <Inputs.OTPSlot index={7} />
+                    <Inputs.OTPSlot index={8} />
+                </Inputs.OTPGroup>
+            </Inputs.OTPWrapper>
+        </form>
     )
 }
