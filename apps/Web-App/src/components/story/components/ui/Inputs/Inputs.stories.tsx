@@ -1,19 +1,23 @@
 import { Meta } from "@storybook/react";
-import * as Inputs from "@ui/Input"
+import * as Inputs from "@/components/ui/Inputs"
 
 const meta: Meta = {
-    title: "Components/UI/Input",
+    title: "Components/UI/Inputs",
 }
 
 
 export default meta;
 
+export const Textarea = () => {
+    return <Inputs.Textarea placeholder="Textarea Placeholder" />
+}
+
 export const Input = () => {
-    return <Inputs.Default />
+    return <Inputs.Default placeholder="Input Placeholder"/>
 }
 
 export const PasswordInput = () => {
-    return <Inputs.Password />
+    return <Inputs.Password placeholder="PasswordInput Placeholder"/>
 }
 
 export const OneTimePasswordInput = () => {
