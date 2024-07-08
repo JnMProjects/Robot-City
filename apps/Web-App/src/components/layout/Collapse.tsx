@@ -105,4 +105,4 @@ const Collapse: React.FC<CollapseProps> = ({ defaultExpanded, title, trigger, ch
   }
 };
 
-export { CollapseGroup, Collapse };
+export { CollapseGroup as Group, Collapse as Object };

@@ -1,0 +1,46 @@
+import { Meta, Canvas, Primary } from "@storybook/blocks";
+import * as InputStories from "./Inputs.stories";
+import * as Collapse from "@layout/Collapse";
+
+<Meta of={InputStories} />
+
+# Inputs
+
+<Primary />
+
+## Inputs have multiple Usecases, so lets Explore the
+<Collapse.Group title="Variants">
+    <Collapse.Object trigger="Inputs.Textarea" title="The Text Area">
+        The Text Area is a simple Input Field that can be used to input multiple lines of text.
+        
+        - placeholder : string - The Placeholder Text
+        <Canvas of={InputStories.Textarea} />
+    </Collapse.Object>
+    <Collapse.Object trigger="Inputs.Input" title="The Normal Input">
+        The Input is a simple Input Field that can be used to input a single line of text.
+        
+        - placeholder : string - The Placeholder Text
+        <Canvas of={InputStories.Input} />
+    </Collapse.Object>
+    <Collapse.Object trigger="Inputs.PasswordInput" title="The Password Input">
+        The Password Input is a simple Input Field that can be used to input a password.
+        It also has a show/hide password button. With an EyeCon.
+        
+        - placeholder : string - The Placeholder Text
+        <Canvas of={InputStories.PasswordInput} />
+    </Collapse.Object>
+    <Collapse.Object trigger="OTP Input" title="The One Time Password Input">
+        The OTP Input is a simple Input Field that can be used to input a One Time Password.
+        It provides multiple components:
+        - .OTPWrapper - Wraps the OTP and accepts a maxLength Prop
+        - .OTPGroup - Wraps the Slots
+        - .OTPSlot - The Slot for the OTP needs a index Prop
+        - .OTPSeperator - The Seperator between the SlotGroups
+
+        Wrap the OTP in a form to access the data
+        
+        ### Example
+        <Canvas of={InputStories.OneTimePasswordInput} />
+        <Canvas of={InputStories.OTPUsedAsPinInput} />
+    </Collapse.Object>
+</Collapse.Group>

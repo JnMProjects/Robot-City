@@ -1,20 +1,20 @@
 import { Canvas, Meta, Primary, Controls, Source } from '@storybook/blocks';
 import * as ToggleStories from './Toggle.stories';
-import { Collapse, CollapseGroup } from '@layout/.';
+import * as Collapse from '@layout/Collapse';
 
 <Meta of={ToggleStories} />
 # Toggle
 
 <Primary />
 
-<CollapseGroup title="Types of Toggles">
-    <Collapse trigger="The Standalone Toggle" defaultExpanded>
+<Collapse.Group title="Types of Toggles">
+    <Collapse.Object trigger="The Standalone Toggle" defaultExpanded>
         The Standalone Toggle is a simple toggle that can be used to switch between two states.
         
         <Canvas of={ToggleStories.Default} />
         <Source of={ToggleStories.Default} />
-    </Collapse>
-    <Collapse trigger="The Toggle Group">
+    </Collapse.Object>
+    <Collapse.Object trigger="The Toggle Group">
         The Toggle Group is a group of toggles that can be used to switch between multiple states.
         
         ## It Mainly aligns the Toggles Together
@@ -26,5 +26,5 @@ import { Collapse, CollapseGroup } from '@layout/.';
         <Source of={ToggleStories.SingleSelectGroup} />
 
         But they need the props type and value.
-    </Collapse>
-</CollapseGroup>
+    </Collapse.Object>
+</Collapse.Group>

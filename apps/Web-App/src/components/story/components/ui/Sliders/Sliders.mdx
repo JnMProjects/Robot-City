@@ -1,0 +1,36 @@
+import {Meta, Canvas, Primary} from "@storybook/blocks";
+import * as SliderStories from "./Sliders.stories";
+import * as Card from "@layout/Card"
+
+<Meta of={SliderStories}/>
+
+# Sliders
+
+<div className="flex flex-col">
+    <Card.Wrapper>
+        <Card.Title>Slider</Card.Title>
+        <Card.Description>Also Known as Default</Card.Description>
+        <Card.Content>
+            <Canvas of={SliderStories.Default}/>
+        </Card.Content>
+        <Card.Footer>
+            Props:
+            - max: number - The maximum value of the slider
+            - defaultValue: numberarray - The default value of the slider
+            - step: number - The Steps of the slider // Does it move in an iterval of 1 0.1 0.01 etc
+        </Card.Footer>
+    </Card.Wrapper>
+    <Card.Wrapper>
+        <Card.Title>Gauge</Card.Title>
+        <Card.Description>GaugeCircle</Card.Description>
+        <Card.Content>
+            <Canvas of={SliderStories.GaugeCircle}/>
+        </Card.Content>
+        <Card.Footer>
+            Props:
+            - max: number - The maximum value of the slider
+            - min: number - The minimum value of the slider
+            - value: number - The value of the slider
+        </Card.Footer>
+    </Card.Wrapper>
+</div>

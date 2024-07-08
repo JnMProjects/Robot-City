@@ -1,6 +1,6 @@
 import { Meta, Canvas, Primary } from "@storybook/blocks"
 import * as CommandStories from "./Command.stories"
-import { Collapse, CollapseGroup } from '@layout/.'
+import * as Collapse from '@layout/Collapse'
 
 <Meta of={CommandStories} />
 # Command
@@ -8,51 +8,51 @@ The Command component is used for giving the User a fast and Simple way to Inter
 --
 <Primary />
 
-<CollapseGroup title="Usecases:">
-    <Collapse trigger="As a Component">
+<Collapse.Group title="Usecases:">
+    <Collapse.Object trigger="As a Component">
         <Canvas of={CommandStories.AsDefault} />
-    </Collapse>
-    <Collapse trigger="As a Dialog">
+    </Collapse.Object>
+    <Collapse.Object trigger="As a Dialog">
         <Canvas of={CommandStories.AsDialog} />
-    </Collapse>
-    <Collapse trigger="As a Popup">
+    </Collapse.Object>
+    <Collapse.Object trigger="As a Popup">
         <Canvas of={CommandStories.AsPopup} />
-    </Collapse>
-</CollapseGroup>
+    </Collapse.Object>
+</Collapse.Group>
 
 --
 
-<CollapseGroup title="The SubComponents">
-    <Collapse trigger="Command.Base" title="The Base" defaultExpanded>
+<Collapse.Group title="The SubComponents">
+    <Collapse.Object trigger="Command.Base" title="The Base" defaultExpanded>
         The Base Component wraps the Command.
 
         If you want to use it as a Dialog or Popup, replace it with
         - Command.asDialog
         - Command.asPopup
 
-        <CollapseGroup>
-            <Collapse trigger="Command.Input" title="The Input">
+        <Collapse.Group>
+            <Collapse.Object trigger="Command.Input" title="The Input">
                 The Input field is customizable with the Prop:
                 - placeholder=""
                 The Set String will be displayed until input is given
-            </Collapse>
-            <Collapse trigger="Command.List" title="The List of Searchobjects">
+            </Collapse.Object>
+            <Collapse.Object trigger="Command.List" title="The List of Searchobjects">
                 The List Component serves as A Wrapper
 
-                <CollapseGroup>
-                    <Collapse trigger="Command.Empty" title="The Not Found String object">
+                <Collapse.Group>
+                    <Collapse.Object trigger="Command.Empty" title="The Not Found String object">
                         -- Child of .List --                The Empty Components Children will be displayed when the Input doesnt match any of the Objects provided in the .List
 
 
-                    </Collapse>
-                    <Collapse trigger="Command.Group" title="The Group Wrapper">
+                    </Collapse.Object>
+                    <Collapse.Object trigger="Command.Group" title="The Group Wrapper">
                         -- Child of .List --                The Group Component wraps the Items and takes a heading as a String Prop
 
 
                         - heading=""
 
-                        <CollapseGroup>
-                            <Collapse trigger="Command.Item" title="The Item">
+                        <Collapse.Group>
+                            <Collapse.Object trigger="Command.Item" title="The Item">
                                 -- Child of .Group --
 
                                 The Item takes several Props in form of Children:
@@ -63,26 +63,26 @@ The Command component is used for giving the User a fast and Simple way to Inter
                                 Functions:
                                 - onSelect={() => {}} takes a arrow function if selected // .Shortcut DOES NOT ADD AUTOMATIC SHORTCUTS
 
-                                <CollapseGroup>
-                                    <Collapse trigger="Command.Shortcut" title="The Shortcut">
+                                <Collapse.Group>
+                                    <Collapse.Object trigger="Command.Shortcut" title="The Shortcut">
                                         -- Child of .Item --
 
                                         The Command.Shortcut Component aligns the Children on the Right with Collor,
                                         BUT IT DOES NOT ADD AUTOMATIC Shortcuts
-                                    </Collapse>
-                                </CollapseGroup>
-                            </Collapse>
-                            <Collapse trigger="Command.Seperator" title="The Cosmetic Seperator">
+                                    </Collapse.Object>
+                                </Collapse.Group>
+                            </Collapse.Object>
+                            <Collapse.Object trigger="Command.Seperator" title="The Cosmetic Seperator">
                                 -- Child of .Group --
 
                                 The Seperator allows a seperation bar to be placed within a Group
 
                                 Takes no Props
-                            </Collapse>
-                        </CollapseGroup>
-                    </Collapse>
-                </CollapseGroup>
-            </Collapse>
-        </CollapseGroup>
-    </Collapse>
-</CollapseGroup>
+                            </Collapse.Object>
+                        </Collapse.Group>
+                    </Collapse.Object>
+                </Collapse.Group>
+            </Collapse.Object>
+        </Collapse.Group>
+    </Collapse.Object>
+</Collapse.Group>

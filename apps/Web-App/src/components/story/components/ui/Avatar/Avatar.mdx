@@ -10,16 +10,15 @@ import {
     DrawerTitle,
     DrawerDescription,
     DrawerClose,
-    DrawerFooter,
-    Collapse,
-    CollapseGroup
+    DrawerFooter
 } from '@layout';
+import * as Collapse from "@layout/Collapse";
 
 <Meta of={AvatarStories} />
 # Avatar
 <Primary />
-<CollapseGroup>
-    <Collapse trigger="Code" title="">
+<Collapse.Group>
+    <Collapse.Object trigger="Code" title="">
         ## Avatar
         ### Usage
         ```tsx
@@ -56,8 +55,8 @@ import {
             <AvatarGroup users={["derjacklive", "octocat", "github", "mutebefehl"]} limit={3} />
         </Popup>
         
-    </Collapse>
-</CollapseGroup>
+    </Collapse.Object>
+</Collapse.Group>
 
 ## Types
 
