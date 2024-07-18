@@ -25,27 +25,27 @@ import {
     DrawerFooter
 } from "@layout/.";
 
-<Drawer>
-    <DrawerTrigger>
+<Drawer.Wrapper>
+    <Drawer.Trigger>
         {/* Trigger goes here */}
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
+    </Drawer.Trigger>
+    <Drawer.Content>
+        <Drawer.Header>
+            <Drawer.Title>
                 {/* Title goes here // Text Possible */} 
-            </DrawerTitle>
-            <DrawerDescription>
+            </Drawer.Title>
+            <Drawer.Description>
                 {/* Description goes here // Text Possible */}
-            </DrawerDescription>
-            <DrawerClose>
+            </Drawer.Description>
+            <Drawer.Close>
                 {/* Close button goes here // Also Text Possible */}
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
+            </Drawer.Close>
+        </Drawer.Header>
+        <Drawer.Footer>
             {/* Footer goes here // Text Only */}
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+        </Drawer.Footer>
+    </Drawer.Content>
+</Drawer.Wrapper>
 ```
 
 Important to note is that the Buttons Are Styled in Text Only.

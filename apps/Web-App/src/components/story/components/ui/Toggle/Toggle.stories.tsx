@@ -1,41 +1,41 @@
 import React from "react";
 import { Meta } from "@storybook/react";
-import { Toggle, ToggleGroup, ToggleGroupItem } from "@ui/Toggle";
+import * as Toggle from "@ui/Toggle";
 
 export default {
     title: "Components/UI/Toggle",
-    component: Toggle,
+    component: Toggle.Single,
     controls: { hideNoControlsWarning: true },
 } as Meta;
 
 export const Default = () => (
-    <Toggle variant="default" size="default" >Bold</Toggle>
+    <Toggle.Single variant="default" size="default" >Bold</Toggle.Single>
 );
 
 export const Outline = () => (
-    <Toggle variant="outline" size="default" >Italic</Toggle>
+    <Toggle.Single variant="outline" size="default" >Italic</Toggle.Single>
 );
 
 export const Small = () => (
-    <Toggle variant="default" size="sm" >Underlined</Toggle>
+    <Toggle.Single variant="default" size="sm" >Underlined</Toggle.Single>
 );
 
 export const Large = () => (
-    <Toggle variant="default" size="lg" >Strikethrough</Toggle>
+    <Toggle.Single variant="default" size="lg" >Strikethrough</Toggle.Single>
 );
 
 export const MultiSelectGroup = () => (
-        <ToggleGroup type="multiple">
-            <ToggleGroupItem value="One">One</ToggleGroupItem>
-            <ToggleGroupItem value="Two">Two</ToggleGroupItem>
-            <ToggleGroupItem value="Three">Three</ToggleGroupItem>
-        </ToggleGroup>
+        <Toggle.Group type="multiple">
+            <Toggle.Item value="One">One</Toggle.Item>
+            <Toggle.Item value="Two">Two</Toggle.Item>
+            <Toggle.Item value="Three">Three</Toggle.Item>
+        </Toggle.Group>
 )
 
 export const SingleSelectGroup = () => (
-        <ToggleGroup type="single">
-            <ToggleGroupItem value="One">One</ToggleGroupItem>
-            <ToggleGroupItem value="Two">Two</ToggleGroupItem>
-            <ToggleGroupItem value="Three">Three</ToggleGroupItem>
-        </ToggleGroup>
+        <Toggle.Group type="single">
+            <Toggle.Item value="One">One</Toggle.Item>
+            <Toggle.Item value="Two">Two</Toggle.Item>
+            <Toggle.Item value="Three">Three</Toggle.Item>
+        </Toggle.Group>
 )

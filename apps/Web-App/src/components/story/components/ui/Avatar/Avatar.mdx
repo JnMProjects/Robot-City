@@ -1,18 +1,9 @@
-import { Canvas, Meta, Primary, Controls, Source } from '@storybook/blocks';
-import { Avatar, AvatarGroup } from '@ui/';
-import * as AvatarStories from './Avatar.stories';
-import { Popup } from '@ui/.';
-import {
-    Drawer,
-    DrawerTrigger,
-    DrawerContent,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerDescription,
-    DrawerClose,
-    DrawerFooter
-} from '@layout';
-import * as Collapse from "@layout/Collapse";
+import { Canvas, Meta, Primary, Controls, Source } from '@storybook/blocks'
+import { Avatar, AvatarGroup } from '@ui/Avatar'
+import * as AvatarStories from './Avatar.stories'
+import { Popup } from '@ui/.'
+import * as Drawer from '@layout/Drawer'
+import * as Collapse from '@layout/Collapse'
 
 <Meta of={AvatarStories} />
 # Avatar
@@ -25,15 +16,15 @@ import * as Collapse from "@layout/Collapse";
         import { Avatar } from '@ui/.';
 
         <Avatar username="github" />
-        ```	
+        ```
 
         ### Arguments
         username: string // The username of the user
 
         size: number // The size of the avatar in px
-        
+
         placeholder: boolean // If the avatar should be a placeholder
-        
+
         links: boolean // If the avatar should be a link to the user's profile
 
         ## AvatarGroup
@@ -46,109 +37,120 @@ import * as Collapse from "@layout/Collapse";
 
         ### Arguments
         users: string[] // The usernames of the users
-        
+
         size: number // The size of the avatar in px
 
         limit: number // The maximum amount of avatars to display // Rest will be displayed as a number
 
         <Popup trigger="Limit" >
-            <AvatarGroup users={["derjacklive", "octocat", "github", "mutebefehl"]} limit={3} />
+            <AvatarGroup users={["jackatdjl", "octocat", "github", "mutebefehl"]} limit={3} />
         </Popup>
-        
+
     </Collapse.Object>
+
 </Collapse.Group>
 
 ## Types
 
-<Drawer>
-    <DrawerTrigger>
+<Drawer.Wrapper>
+    <Drawer.Trigger>
         <Avatar username="derjacklive" size={50} />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
+    </Drawer.Trigger>
+    <Drawer.Content>
+        <Drawer.Header>
+            <Drawer.Title>
                 Default Avatar
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
+            </Drawer.Title>
+            <Drawer.Description>
+            {}
+            </Drawer.Description>
             <Canvas of={AvatarStories.Default} />
             <Controls of={AvatarStories.Default} />
-            <DrawerClose>
+            <Drawer.Close>
                 Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
-<Drawer>
-    <DrawerTrigger>
+            </Drawer.Close>
+        </Drawer.Header>
+        <Drawer.Footer>
+        {}
+        </Drawer.Footer>
+    </Drawer.Content>
+</Drawer.Wrapper>
+<Drawer.Wrapper>
+    <Drawer.Trigger>
         <Avatar placeholder size={50} />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
+    </Drawer.Trigger>
+    <Drawer.Content>
+        <Drawer.Header>
+            <Drawer.Title>
                 Placeholder in Style of an Avatar
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
+            </Drawer.Title>
+            <Drawer.Description>
+            {}
+            </Drawer.Description>
             <Canvas of={AvatarStories.Placeholder} />
             <Controls of={AvatarStories.Placeholder} />
-            <DrawerClose>
+            <Drawer.Close>
                 Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
-<Drawer>
-    <DrawerTrigger>
-        <AvatarGroup users={["derjacklive", "octocat", "mutebefehl"]} size={50} />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
+            </Drawer.Close>
+        </Drawer.Header>
+        <Drawer.Footer>
+        {}
+        </Drawer.Footer>
+    </Drawer.Content>
+</Drawer.Wrapper>
+<Drawer.Wrapper>
+    <Drawer.Trigger>
+        <Avatar.Group users={["derjacklive", "octocat", "mutebefehl"]} size={50} />
+    </Drawer.Trigger>
+    <Drawer.Content>
+        <Drawer.Header>
+            <Drawer.Title>
                 Avatar Group
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
+            </Drawer.Title>
+            <Drawer.Description>
+            {}
+            </Drawer.Description>
             <AvatarGroup users={["derjacklive", "octocat", "mutebefehl"]} size={150} />
             ```tsx
             import { AvatarGroup } from './Avatar';
 
             <AvatarGroup users={["derjacklive", "octocat", "mutebefehl"]} />
             ```
-            <DrawerClose>
+            <Drawer.Close>
                 Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
-<Drawer>
-    <DrawerTrigger>
+            </Drawer.Close>
+        </Drawer.Header>
+        <Drawer.Footer>
+        {}
+        </Drawer.Footer>
+    </Drawer.Content>
+
+</Drawer.Wrapper>
+<Drawer.Wrapper>
+    <Drawer.Trigger>
         <AvatarGroup users={["mutebefehl", "octocat", "derjacklive", "o"]} limit={3} size={50} />
-    </DrawerTrigger>
-    <DrawerContent>
-        <DrawerHeader>
-            <DrawerTitle>
+    </Drawer.Trigger>
+    <Drawer.Content>
+        <Drawer.Header>
+            <Drawer.Title>
                 Limited Avatar Group
-            </DrawerTitle>
-            <DrawerDescription>
-            </DrawerDescription>
+            </Drawer.Title>
+            <Drawer.Description>
+            {}
+            </Drawer.Description>
             <AvatarGroup users={["mutebefehl", "octocat", "derjacklive", "o"]} limit={3} size={100} />
             ```tsx
             import { AvatarGroup } from './Avatar';
 
             <AvatarGroup users={["mutebefehl", "octocat", "derjacklive", "o"]} limit={3} />
             ```
-            <DrawerClose>
+            <Drawer.Close>
                 Close
-            </DrawerClose>
-        </DrawerHeader>
-        <DrawerFooter>
-        </DrawerFooter>
-    </DrawerContent>
-</Drawer>
+            </Drawer.Close>
+        </Drawer.Header>
+        <Drawer.Footer>
+        {}
+        </Drawer.Footer>
+    </Drawer.Content>
+
+</Drawer.Wrapper>

@@ -53,12 +53,12 @@ export const Placeholder: Story = {
 
 export const Group = () => {
     return (
-        <AvatarGroup users={["a", "octocat", "derjacklive", "mutebefehl"]} />
+        <AvatarGroup users={["a", "octocat", "jackatdjl", "mutebefehl"]} />
     )
 }
 
 export const GroupLimited = () => {
     return (
-        <AvatarGroup users={["mutebefehl", "octocat", "derjacklive", "o"]} limit={3} />
+        <AvatarGroup users={["mutebefehl", "octocat", "jackatdjl", "o"]} limit={3} />
     )
 }

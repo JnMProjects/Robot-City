@@ -1,13 +1,4 @@
-import {
-    Drawer,
-    DrawerClose,
-    DrawerContent,
-    DrawerDescription,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerTrigger,
-  } from "@layout/Drawer";
+import * as Drawer from "@layout/Drawer";
   
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -20,21 +11,21 @@ type Story = StoryObj<typeof Drawer>;
 
 export const Default = () => {
     return (
-        <Drawer>
-            <DrawerTrigger>Open</DrawerTrigger>
-            <DrawerContent>
-                <DrawerHeader>
-                    <DrawerTitle>This is a Drawer</DrawerTitle>
-                    <DrawerDescription>Well Obviously.</DrawerDescription>
-                </DrawerHeader>
-                <DrawerFooter>
+        <Drawer.Wrapper>
+            <Drawer.Trigger>Open</Drawer.Trigger>
+            <Drawer.Content>
+                <Drawer.Header>
+                    <Drawer.Title>This is a Drawer</Drawer.Title>
+                    <Drawer.Description>Well Obviously.</Drawer.Description>
+                </Drawer.Header>
+                <Drawer.Footer>
                 <div>Footer</div>
-                <DrawerClose>
+                <Drawer.Close>
                     Close
-                </DrawerClose>
-                </DrawerFooter>
-            </DrawerContent>
-        </Drawer>
+                </Drawer.Close>
+                </Drawer.Footer>
+            </Drawer.Content>
+        </Drawer.Wrapper>
 
     )
 }

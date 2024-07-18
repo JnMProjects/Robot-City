@@ -18,16 +18,16 @@ const Drawer = ({
 Drawer.displayName = "Drawer"
 
 const DrawerTrigger = React.forwardRef<
-    React.ElementRef<typeof DrawerPrimitive.Trigger>,
-    React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Trigger> & { variant?: "primary" | "secondary" | "tertiary" | "soft" | "text"}
->(({ className, children,variant, ...props }, ref) => (
-    <DrawerPrimitive.Trigger
-        ref={ref}
-        className={cn(" w-auto h-auto", className)}
-        {...props}
-    >
-      <Button variant="outline">{children}</Button>
-    </DrawerPrimitive.Trigger>
+  React.ElementRef<typeof DrawerPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Trigger> & { variant?: "destructive" | "outline" | "secondary" | "ghost" | "link" | "expandIcon" | "ringHover" | "shine" | "gooeyRight" | "gooeyLeft" | "linkHover1" | "linkHover2" }
+>(({ className, children, variant, ...props }, ref) => (
+  <DrawerPrimitive.Trigger
+    ref={ref}
+    className={cn(" w-auto h-auto", className)}
+    {...props}
+  >
+    <Button variant={variant || "outline"}>{children}</Button>
+  </DrawerPrimitive.Trigger>
 ))
 DrawerTrigger.displayName = DrawerPrimitive.Trigger.displayName
 
@@ -133,12 +133,12 @@ const DrawerDescription = React.forwardRef<
 DrawerDescription.displayName = DrawerPrimitive.Description.displayName
 
 export {
-  Drawer,
-  DrawerTrigger,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerDescription,
-  DrawerClose,
-  DrawerFooter
+  Drawer as Wrapper,
+  DrawerTrigger as Trigger,
+  DrawerContent as Content,
+  DrawerHeader as Header,
+  DrawerTitle as Title,
+  DrawerDescription as Description,
+  DrawerClose as Close,
+  DrawerFooter as Footer
 }

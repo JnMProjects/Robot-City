@@ -95,5 +95,5 @@ const ToggleGroupItem = React.forwardRef<
 
 ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName
 
-export { ToggleGroup, ToggleGroupItem}
-export { Toggle, toggleVariants }
+export { ToggleGroup as Group, ToggleGroupItem as Item}
+export { Toggle as Single, toggleVariants }

@@ -1,16 +1,5 @@
 export { Container } from './Container';
 
-export {
-    Drawer,
-    DrawerTrigger,
-    DrawerClose,
-    DrawerContent,
-    DrawerHeader,
-    DrawerFooter,
-    DrawerTitle,
-    DrawerDescription,
-} from "./Drawer";
-
 export * from "./Collapse"
 
 export {

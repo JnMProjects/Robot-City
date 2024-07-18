@@ -86,4 +86,4 @@ const CalendarPopup = () => {
   )
 }
 
-export { Calendar, CalendarPopup }
+export { Calendar as Base, CalendarPopup as asPopup }
