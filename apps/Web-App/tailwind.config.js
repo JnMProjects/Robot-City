@@ -382,8 +382,9 @@ module.exports = {
           to: { opacity: '1', transform: 'translateX(0)' },
         },
         "shine": {
-            from: { backgroundPosition: '200% 0' },
-            to: { backgroundPosition: '-200% 0' },
+            "0%": { backgroundPosition: '200% 0', opacity: '0.5' },
+            "50%": { backgroundPosition: '-200% 0', opacity: '1' },
+            "100%": { backgroundPosition: '200% 0', opacity: '0.5' },
         },
         "caret-blink": {
           "0%,70%,100%": { opacity: "1" },
@@ -400,6 +401,7 @@ module.exports = {
         "slideDownAndFade": 'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         "slideLeftAndFade": 'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         "shine": "shine 8s ease-in-out infinite",
+        "skeletal-shine": "shine 2.5s cubic-bezier(.55,.35,.29,.9) infinite",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
       },
     },

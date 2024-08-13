@@ -1,0 +1,23 @@
+import { Meta, Canvas, Primary, Code } from '@storybook/blocks'
+import * as SkeletonStory from './Skeleton.stories'
+import { Skeleton } from '@layout/Skeleton'
+
+<Meta of={SkeletonStory} />
+
+# Skeleton
+
+<Skeleton>HEHEHE</Skeleton>
+
+The Skeleton component is used to display a loading state for a component. It is used to indicate to the user that the content is loading and will be displayed shortly.
+
+### Pre Styled!!!
+
+<Primary />
+
+## Usage
+
+```tsx
+import { Skeleton } from '@layout/Skeleton'
+
+;<Skeleton>{children}</Skeleton>
+```
