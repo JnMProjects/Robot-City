@@ -401,7 +401,7 @@ module.exports = {
         "slideDownAndFade": 'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         "slideLeftAndFade": 'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         "shine": "shine 8s ease-in-out infinite",
-        "skeletal-shine": "shine 2.5s cubic-bezier(.55,.35,.29,.9) infinite",
+        "skeleton": "shine 2.5s cubic-bezier(.55,.35,.29,.9) infinite",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
       },
     },

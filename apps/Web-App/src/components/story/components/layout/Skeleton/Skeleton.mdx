@@ -1,6 +1,6 @@
-import { Meta, Canvas, Primary, Code } from '@storybook/blocks'
-import * as SkeletonStory from './Skeleton.stories'
-import { Skeleton } from '@layout/Skeleton'
+import { Meta, Canvas, Primary, Code } from "@storybook/blocks"
+import * as SkeletonStory from "./Skeleton.stories"
+import { Skeleton } from "@layout/Skeleton"
 
 <Meta of={SkeletonStory} />
 
@@ -17,7 +17,17 @@ The Skeleton component is used to display a loading state for a component. It is
 ## Usage
 
 ```tsx
-import { Skeleton } from '@layout/Skeleton'
+import { Skeleton } from "@layout/Skeleton"
 
-;<Skeleton>{children}</Skeleton>
+export const MyComponent = () => {
+  return <Skeleton>{children}</Skeleton>
+}
+```
+
+### Tips:
+
+You can also Use the Skeleton by adding the Tailwind Animation:
+
+```tsx
+<div className="animate-skeleton">// Some Stuff</div>
 ```
