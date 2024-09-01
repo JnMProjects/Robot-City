@@ -1,0 +1,50 @@
+import { Canvas, Meta } from "@storybook/blocks"
+import * as CardStory from "./Card.stories"
+import * as Collapse from "@layout/Collapse"
+
+<Meta of={CardStory} />
+
+# Card
+
+<Canvas of={CardStory.Default} />
+
+the Card Makes it easy to Display Content in a Neat and Organized Manner.
+
+### Pre Styled!!!
+
+<Collapse.Group title="Preset and Custom">
+  <Collapse.Object
+    trigger="Using Presets"
+    title="The Preset Component"
+    defaultExpanded
+  >
+    The Preset Component is the Fastest Way to Create Basic Text Cards.
+    But Eitherway they can be used to Create More Complex Cards.
+
+    It Has Props:
+    - Title ~ The Title gets diplayed at the top of the Card. Typeof String
+    - Description ~ The Description gets displayed below the Title. Typeof String
+    - Header ~ The Header gets displayed at the top of the Card over The Divider.
+    - Footer ~ The Footer gets displayed at the bottom of the Card.
+    - nodivider ~ Removes the Divider dividing Header and Content.
+
+    The Children of Preset Component are Considered the Content of the Card.
+
+  </Collapse.Object>
+  <Collapse.Object trigger="Custom" title="Customisation is Key">
+    Customisation is Key to the Card Componentset.
+
+    To Use The Card Componentset Wrap the Card Components in Card.Wrapper
+
+    To Use Title and/or Description, wrap with Card.Header
+    Components:
+    - Card.Wrapper ~ Wraps the Card Components
+    - Card.Header ~ The Header of the Card
+    - Card.Title ~ The Title of the Card
+    - Card.Description ~ The Description of the Card
+    - Card.Divider ~ Used to Divide Parts of Content or Header and Content
+    - Card.Content ~ The Content of the Card
+    - Card.Footer ~ The Footer of the Card
+
+  </Collapse.Object>
+</Collapse.Group>
