@@ -43,22 +43,22 @@ function Calendar({
         table: "w-full border-none space-y-1",
         head_row: "flex",
         head_cell:
-          "text-l-txt-300 dark:text-d-txt-800 rounded-md w-9 font-normal text-[0.8rem]",
+          "text-l-txt-300 dark:text-d-txt-800 rounded-md w-9 font-normal text-[0.8rem] duration-700",
         row: "flex w-full mt-2",
-        cell: "h-9 w-9 text-l-txt dark:text-d-txt text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-l-accent/50 dark:[&:has([aria-selected].day-outside)]:bg-d-accent/50 [&:has([aria-selected])]:bg-l-accent dark:[&:has([aria-selected])]:bg-d-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+        cell: "h-9 w-9 text-l-txt dark:text-d-txt text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-l-accent/50 duration-700 dark:[&:has([aria-selected].day-outside)]:bg-d-accent/50 [&:has([aria-selected])]:bg-l-accent dark:[&:has([aria-selected])]:bg-d-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
           buttonVariants({ variant: "ghost" }),
           "h-9 w-9 p-0 font-normal aria-selected:opacity-100"
         ),
         day_range_end: "day-range-end",
         day_selected:
-          "bg-l-primary text-l-txt hover:bg-l-primary-600 focus:bg-l-primary focus:text-l-txt",
-        day_today: "bg-accent text-l-sec dark:text-d-sec",
+          "bg-l-primary text-l-txt hover:bg-l-primary-600 focus:bg-l-primary focus:text-l-txt duration-700",
+        day_today: "bg-accent text-l-sec dark:text-d-sec duration-700",
         day_outside:
-          "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",
-        day_disabled: "text-muted-foreground opacity-50",
+          "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30 duration-700",
+        day_disabled: "text-muted-foreground opacity-50 duration-700",
         day_range_middle:
-          "aria-selected:bg-accent aria-selected:text-accent-foreground",
+          "aria-selected:bg-accent aria-selected:text-accent-foreground duration-700",
         day_hidden: "invisible",
         ...classNames,
       }}

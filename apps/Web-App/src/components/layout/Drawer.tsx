@@ -68,7 +68,7 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-      "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border border-b-0 border-l-acc-200 dark:border-d-acc-800 bg-l-bg/20 dark:bg-d-bg/20 glassblur",
+      "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border border-b-0 border-l-acc-200 duration-700 dark:border-d-acc-800 bg-l-bg/20 dark:bg-d-bg/20 glassblur",
       className
       )}
       style={{ maxHeight: '65vh' }} // Set the max height to 90% of the viewport height
@@ -88,7 +88,7 @@ const DrawerHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn("grid gap-1.5 p-4 text-center text-l-txt dark:text-d-txt sm:text-left", className)}
+    className={cn("grid gap-1.5 p-4 text-center text-l-txt duration-700 dark:text-d-txt sm:text-left", className)}
     {...props}
   />
 )
@@ -99,7 +99,7 @@ const DrawerFooter = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn("mt-auto flex flex-col gap-2 p-4 text-l-txt/80 dark:text-d-txt/80", className)}
+    className={cn("mt-auto flex flex-col gap-2 p-4 text-l-txt/80 duration-700 dark:text-d-txt/80", className)}
     {...props}
   />
 )
@@ -112,7 +112,7 @@ const DrawerTitle = React.forwardRef<
   <DrawerPrimitive.Title
     ref={ref}
     className={cn(
-      "text-lg font-semibold leading-none tracking-tight text-l-txt dark:text-d-txt",
+      "text-lg font-semibold leading-none tracking-tight text-l-txt duration-700 dark:text-d-txt",
       className
     )}
     {...props}

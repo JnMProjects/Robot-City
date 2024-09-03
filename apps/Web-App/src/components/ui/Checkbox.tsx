@@ -47,7 +47,7 @@ const Checkbox = React.forwardRef<
       
     </div>
     <div className="grid gap-1.5 leading-none">
-      <label htmlFor="label" className="text-sm text-l-txt dark:text-d-txt font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+      <label htmlFor="label" className="text-sm text-l-txt duration-700 dark:text-d-txt font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
         {children}
       </label>
     </div>

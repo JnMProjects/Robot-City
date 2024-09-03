@@ -6,7 +6,7 @@ import * as Feather from "react-feather"
 
 const buttonVariants = cva(
     {
-        base: "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+        base: "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 duration-700",
         variants: {
             variant: {
                 default: "bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt hover:bg-l-bg/80 dark:hover:bg-d-bg/80",

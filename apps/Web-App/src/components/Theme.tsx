@@ -2,56 +2,46 @@
 
 import React, { useEffect, useState } from 'react';
 import { cn } from './twm';
+import "@theme-toggles/react/css/Within.css"
+import { Within } from "@theme-toggles/react"
 
-const ThemeProvider: React.FC = () => {
-    const [theme, setTheme] = useState<'light' | 'dark'>(() => {
-        if (typeof window !== 'undefined') {
-            const storedTheme = localStorage.getItem('theme');
-            let calculatedTheme = storedTheme ? (storedTheme as 'light' | 'dark') : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            localStorage.setItem('theme', calculatedTheme);
-            return calculatedTheme;
-        } else {
-            return 'dark';
-        }
-    });
-
+const ThemeToggleButton: React.FC<{ size?: number }> = ({ size = 5 }) => {
+    const storedTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('theme') : null;
+    
     useEffect(() => {
-        function handleStorageChange() {
-            const storedTheme = localStorage.getItem('theme');
-            if (storedTheme) {
-                setTheme(storedTheme as 'light' | 'dark');
-            }
+        if (storedTheme === 'dark') {
+            document.body.classList.add('dark');
+            setToggle(true);
+        } else {
+            document.body.classList.remove('dark');
+            setToggle(false);
         }
+    }, [storedTheme])
 
-        window.addEventListener('storage', handleStorageChange);
+    const [isToggled, setToggle] = React.useState(false);
 
-        // Cleanup function to remove the event listener when the component unmounts
-        return () => {
-            window.removeEventListener('storage', handleStorageChange);
-        };
-    }, []);
+    function toggle() {
+        setToggle(!isToggled);
+        const newTheme = isToggled ? 'light' : 'dark';
+        localStorage.setItem('theme', newTheme);
+    }
 
+
+    const num = String(size)
     return (
-        <></>
+        <Within
+            duration={750}
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+            toggled={isToggled}
+            toggle={toggle}
+            reversed
+            className={`h-${num} w-${num}`}
+        />
     );
 };
 
-export default ThemeProvider;
+ThemeToggleButton.displayName = 'ThemeToggleButton';
 
-export function toggleTheme() {
-    const storedTheme = localStorage.getItem('theme');
-    const newTheme = storedTheme === 'light' ? 'dark' : 'light';
-    localStorage.setItem('theme', newTheme);
-}
-
-const ThemeToggleCircle = React.forwardRef<HTMLButtonElement, React.HTMLAttributes<HTMLButtonElement>>(({ className, ...props }, ref) => (
-    <button
-        ref={ref}
-        className={cn("w-6 h-6 rounded-full bg-l-acc dark:bg-d-acc", className)}
-        onClick={() => toggleTheme()}
-        {...props}
-    />
-));
-ThemeToggleCircle.displayName = "ThemeToggleCircle";
-
-export { ThemeToggleCircle }
+export { ThemeToggleButton }

@@ -51,16 +51,16 @@ const Avatar: React.FC<AvatarProps> = ({ username, placeholder = false, size, cl
             return (
                 // Disabled only there because next img needs a src but a placeholder doesnt have one
                 // eslint-disable-next-line @next/next/no-img-element
-                <img width={size || 100} height={size || 100} className={cn(" rounded-full bg-l-bg/20 dark:bg-d-bg/20 softblur border-4 border-l-prim dark:border-d-prim", className)} alt="" />
+                <img width={size || 100} height={size || 100} className={cn(" rounded-full bg-l-bg/20 dark:bg-d-bg/20 softblur border-4 border-l-prim dark:border-d-prim duration-700", className)} alt="" />
             )
         case false:
             return (
                 links ? 
                 <a href={profileLink}>
-                    <Image width={size || 100} height={size || 100} src={avatarUrl || "octocat"} alt={"Avatar of " + username} className={cn(" rounded-full border-4 border-l-prim dark:border-d-prim", className)} />
+                    <Image width={size || 100} height={size || 100} src={avatarUrl || "octocat"} alt={"Avatar of " + username} className={cn(" rounded-full border-4 border-l-prim dark:border-d-prim duration-700", className)} />
                 </a>
                 :
-                <Image width={size || 100} height={size || 100} src={avatarUrl || "octocat"} alt={"Avatar of " + username} className={cn(" rounded-full border-4 border-l-prim dark:border-d-prim", className)} />
+                <Image width={size || 100} height={size || 100} src={avatarUrl || "octocat"} alt={"Avatar of " + username} className={cn(" rounded-full border-4 border-l-prim dark:border-d-prim duration-700", className)} />
             )
     }        
 

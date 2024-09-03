@@ -9,7 +9,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-l-bg/10 dark:bg-d-bg/10 glassblur text-l-txt dark:text-d-txt shadow-sm",
+      "rounded-lg border bg-l-bg/10 dark:bg-d-bg/10 duration-700 glassblur text-l-txt dark:text-d-txt shadow-sm",
       className
     )}
     {...props}
@@ -47,7 +47,7 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("pl-3 text-sm text-l-txt-800 dark:text-d-txt-200", className)}
+    className={cn("pl-3 text-sm text-l-txt-800 duration-700 dark:text-d-txt-200", className)}
     {...props}
   />
 ))
@@ -79,7 +79,7 @@ const CardDivider = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("border-t border-d-bg dark:border-l-bg", className)}
+    className={cn("border-t border-d-bg duration-700 dark:border-l-bg", className)}
     {...props}
   />
 ))

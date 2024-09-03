@@ -5,13 +5,14 @@ import * as Card from '@layout/Card';
 import { Button } from '@ui/index';
 import { toast } from 'sonner';
 import * as feather from 'react-feather';
-import { ThemeToggleCircle } from '@components/Theme';
+import { ThemeToggleButton } from '@components/Theme';
 import WelcomeUser from '@pre/functions/welcomeUser';
+import { DefaultWrapper } from '@/components/presets/className';
 
 export default function Home() {
   WelcomeUser()
   return (
-    <main className='bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt'>
+    <main className={DefaultWrapper} >
       <section className='flex flex-col items-center justify-center w-screen h-screen'>
         <Popup trigger="Press Me">
           <Card.Wrapper>
@@ -25,6 +26,9 @@ export default function Home() {
             </Card.Content>
           </Card.Wrapper>
         </Popup>
+      </section>
+      <section className='absolute bottom-1 left-2'>
+        <ThemeToggleButton />
       </section>
     </main>
   )

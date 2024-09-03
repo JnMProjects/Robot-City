@@ -15,7 +15,7 @@ const CollapseGroup: React.FC<CGroupProps> = ({ children, title, ...props }) => 
   return (
     <>
       {title && <h2>{title}</h2>}
-      <CollapsePrimitive.Root type="multiple" {...props} defaultValue={["default"]} className="border-t border-b border-d-bg dark:border-l-bg" >
+      <CollapsePrimitive.Root type="multiple" {...props} defaultValue={["default"]} className="border-t border-b duration-700 border-d-bg dark:border-l-bg" >
       {children}
       </CollapsePrimitive.Root>
     </>
@@ -29,7 +29,7 @@ const CollapseItem = React.forwardRef<
   <CollapsePrimitive.Item
     ref={ref}
     {...props}
-    className={cn("border-t border-b border-d-bg/70 dark:border-l-bg/70", className)}
+    className={cn("border-t border-b border-d-bg/70 duration-700 dark:border-l-bg/70", className)}
   />
 ))
 CollapseItem.displayName = "AccordionItem"
@@ -42,7 +42,7 @@ const CollapseHeadRaw = React.forwardRef<
     <CollapsePrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between text-l-txt dark:text-d-txt font py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 items-center justify-between text-l-txt duration-700 dark:text-d-txt font py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}
@@ -87,8 +87,8 @@ const Collapse: React.FC<CollapseProps> = ({ defaultExpanded, title, trigger, ch
       <CollapseItem className={cn("border-b border-t")} value={value}>
         <CollapseHeadRaw>{trigger}</CollapseHeadRaw>
         <CollapseContentRaw>
-          <h1 className=" font-bold border-collapse top-2 text-l-txt-800 dark:text-d-txt-400">{title}</h1>
-          <div className={cn("text-l-txt dark:text-d-txt", className)} {...props} >{children}</div>
+          <h1 className=" font-bold border-collapse top-2 duration-700 text-l-txt-800 dark:text-d-txt-400">{title}</h1>
+          <div className={cn("text-l-txt dark:text-d-txt duration-700", className)} {...props} >{children}</div>
         </CollapseContentRaw>
       </CollapseItem>
     );

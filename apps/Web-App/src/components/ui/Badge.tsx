@@ -4,8 +4,8 @@ import React from "react";
 import * as Feather from "react-feather";
 
 const BadgeVariants = cva(
-    {
-        base: " items-center justify-around h-auto w-auto",
+    { 
+        base: " items-center justify-around h-auto w-auto duration-700",
         variants: {
             variant: {
                 primary: " bg-l-prim text-d-txt dark:bg-d-bg dark:text-d-txt",

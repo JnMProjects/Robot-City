@@ -11,7 +11,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <input
         type={type}
         className={cn(
-          "flex text-l-txt dark:text-d-txt h-10 w-full rounded-md border border-slate-700 dark:border-slate-400 bg-l-bg dark:bg-d-bg px-3 py-2 text-sm ring-offset-d-bg dark:ring-offset-l-bg file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-l-txt-500/70 dark:placeholder:text-d-txt-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          "flex text-l-txt dark:text-d-txt h-10 w-full duration-700 rounded-md border border-slate-700 dark:border-slate-400 bg-l-bg dark:bg-d-bg px-3 py-2 text-sm ring-offset-d-bg dark:ring-offset-l-bg file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-l-txt-500/70 dark:placeholder:text-d-txt-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         ref={ref}
@@ -141,7 +141,7 @@ const InputOTPSlot = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "relative flex h-10 w-10 items-center justify-center border-y border-r border-l-sec dark:border-d-sec text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md",
+        "relative flex h-10 w-10 items-center justify-center border-y border-r border-l-sec duration-700 dark:border-d-sec text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md",
         isActive && "z-10 ring-2 ring-ring ring-offset-d-bg dark:ring-offset-l-bg",
         className
       )}
@@ -176,7 +176,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     return (
       <textarea
         className={cn(
-          "flex min-h-[80px] w-full rounded-md border border-input bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt px-3 py-2 text-sm ring-offset-d-bg dark:ring-offset-l-bg placeholder:text-l-txt-500/70 dark:placeholder:text-d-txt-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          "flex min-h-[80px] w-full rounded-md border border-input bg-l-bg duration-700 dark:bg-d-bg text-l-txt dark:text-d-txt px-3 py-2 text-sm ring-offset-d-bg dark:ring-offset-l-bg placeholder:text-l-txt-500/70 dark:placeholder:text-d-txt-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         ref={ref}

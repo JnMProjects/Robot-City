@@ -103,7 +103,6 @@ import { EaselPlugin } from "gsap/EaselPlugin";
 import { PixiPlugin } from "gsap/PixiPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
 
-
 gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase);
 
 export default function RootLayout({
@@ -116,7 +115,7 @@ export default function RootLayout({
     <html lang="en">
       <SpeedInsights />
       <Analytics/>
-      <body className={`${oxanium.variable} ${bungeeSpice.variable} font-oxanium bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt`}>
+      <body className={`${oxanium.variable} ${bungeeSpice.variable} font-oxanium bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt duration-700`}>
         <Toaster />
         <div id="recapcha-container"></div>
         {children}

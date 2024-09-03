@@ -53,7 +53,7 @@ const StatusDot: React.FC<StatusDotProps> = ({ status, label, tip, size, classNa
         return (
             <div className="flex items-center">
                 <img  className={cn(StatusDots({size, status}), className)} />
-                <p className="p-2 text-l-txt dark:text-d-txt">
+                <p className="p-2 text-l-txt duration-700 dark:text-d-txt">
                     {description}
                 </p>
             </div>
