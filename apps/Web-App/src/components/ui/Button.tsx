@@ -15,7 +15,7 @@ const buttonVariants = cva(
                 outline:
                   "border border-l-sec bg-l-bg-300/50 hover:bg-l-bg-400/60 text-l-txt hover:text-l-txt-700 dark:border-d-sec dark:bg-d-bg-700/50 dark:hover:bg-d-bg-600/60 dark:text-d-txt dark:hover:text-d-acc-400",
                 secondary:
-                  "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+                  "glassblur opacity-80",
                 ghost: "hover:bg-l-acc-300/50 dark:hover:bg-d-acc-800/50 text-l-txt dark:text-d-txt hover:text-l-txt-700",
                 link: "text-l-txt dark:text-d-txt hover:text-l-txt-700 dark:hover:text-d-txt-400 duration-200 underline-offset-4 hover:underline",
                 expandIcon:

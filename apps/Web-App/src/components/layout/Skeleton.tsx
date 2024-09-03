@@ -34,7 +34,7 @@ function Skeleton({
       )}
       <div className="bg-l-bg duration-700 dark:bg-d-bg relative z-50" style={{ top: `-${height}px`}}>
         <div
-          className={cn("animate-skeleton rounded-sm duration-700 bg-l-bg-300 dark:bg-d-bg-800 ", className)}
+          className={cn("rounded-sm  animate-skeleton bg-l-bg-300 dark:bg-d-bg-800 ", className)}
           style={{ position: "relative", zIndex: 1, width: width, height: height,  }}
           {...props}
         >
