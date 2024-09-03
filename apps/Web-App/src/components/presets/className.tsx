@@ -16,3 +16,6 @@ const bungeeSpice = Bungee_Spice({
 
 
 export const DefaultWrapper: string = `${oxanium.variable} ${bungeeSpice.variable} font-oxanium bg-l-bg dark:bg-d-bg text-l-txt dark:text-d-txt duration-700`
+
+
+export const DefaultText: string = `font-oxanium text-l-txt dark:text-d-txt duration-700`
