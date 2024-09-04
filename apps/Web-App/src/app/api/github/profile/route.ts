@@ -17,6 +17,8 @@ async function parseGitAvatar(username: string) {
 
     const response = await graphqlWithAuth(query, { username }) as any;
 
+    console.log(response);
+
     return response.user.avatarUrl;
 }
 

@@ -2,6 +2,7 @@ import * as React from "react"
 import { cn } from "../twm"
 import Image from "next/image"
 import { parseGitAvatar } from "../apiaccess"
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface AvatarProps extends React.HTMLAttributes<HTMLImageElement> {
     size?: number;
@@ -35,8 +36,8 @@ interface AvatarProps extends React.HTMLAttributes<HTMLImageElement> {
  * @returns {JSX.Element} The Avatar component.
  */
 const Avatar: React.FC<AvatarProps> = ({ username, placeholder = false, size, className, links, ...props }) => {
-    const [avatarUrl, setAvatarUrl] = React.useState<string | undefined>(undefined);
-    const [profileLink, setProfileLink] = React.useState<string | undefined>(undefined);
+    const [avatarUrl, setAvatarUrl] = React.useState<string | StaticImport>("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrgu4a7W_OM8LmAuN7Prk8dzWXm7PVB_FmA&s");
+    const [profileLink, setProfileLink] = React.useState<string | undefined>("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrgu4a7W_OM8LmAuN7Prk8dzWXm7PVB_FmA&s");
     React.useEffect(() => {
         if (!placeholder) {
             parseGitAvatar(username).then((url) => {
@@ -57,10 +58,10 @@ const Avatar: React.FC<AvatarProps> = ({ username, placeholder = false, size, cl
             return (
                 links ? 
                 <a href={profileLink}>
-                    <Image width={size || 100} height={size || 100} src={avatarUrl || "octocat"} alt={"Avatar of " + username} className={cn(" rounded-full border-4 border-l-prim dark:border-d-prim duration-700", className)} />
+                    <Image width={size || 100} height={size || 100} src={avatarUrl} alt={"Avatar of " + username} className={cn(" rounded-full border-4 border-l-prim dark:border-d-prim duration-700", className)} />
                 </a>
                 :
-                <Image width={size || 100} height={size || 100} src={avatarUrl || "octocat"} alt={"Avatar of " + username} className={cn(" rounded-full border-4 border-l-prim dark:border-d-prim duration-700", className)} />
+                <Image width={size || 100} height={size || 100} src={avatarUrl} alt={"Avatar of " + username} className={cn(" rounded-full border-4 border-l-prim dark:border-d-prim duration-700", className)} />
             )
     }        
 
