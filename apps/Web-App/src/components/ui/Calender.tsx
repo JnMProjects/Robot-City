@@ -72,7 +72,7 @@ function Calendar({
 }
 Calendar.displayName = "Calendar"
 
-import { Popup } from "../layout"
+import { Preset } from "@layout/Popup"
 
 /**
  * Renders a calendar wrapped in a popup.
@@ -80,9 +80,9 @@ import { Popup } from "../layout"
  */
 const CalendarPopup = () => {
   return (
-    <Popup trigger="Show Calendar">
+    <Preset trigger="Show Calendar">
       <Calendar />
-    </Popup>
+    </Preset>
   )
 }
 

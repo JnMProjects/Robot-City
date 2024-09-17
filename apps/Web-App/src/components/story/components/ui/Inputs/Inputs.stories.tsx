@@ -20,7 +20,7 @@ export const PasswordInput = () => {
     return <Inputs.Password placeholder="PasswordInput Placeholder"/>
 }
 
-export const OneTimePasswordInput = () => {
+const OneTimePasswordInputPre = () => {
     return (
         <form>
             <Inputs.OTPWrapper maxLength={6} >
@@ -40,7 +40,9 @@ export const OneTimePasswordInput = () => {
     )
 }
 
-export const OTPUsedAsPinInput = () => {
+export const OneTimePasswordInput = () => {return <OneTimePasswordInputPre />}
+
+const OTPUsedAsPinInputPre = () => {
     return (
         <form>
             <Inputs.OTPWrapper maxLength={8} >
@@ -58,3 +60,5 @@ export const OTPUsedAsPinInput = () => {
         </form>
     )
 }
+
+export const OTPUsedAsPinInput = () => {return <OTPUsedAsPinInputPre />}

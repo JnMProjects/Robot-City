@@ -4,6 +4,7 @@ import * as React from "react"
 import * as RawTooltipPrimitive from "@radix-ui/react-tooltip"
 
 import { cn } from "@components/twm"
+import { DefaultText } from "../presets/className"
 
 const RawTooltipProvider = RawTooltipPrimitive.Provider
 
@@ -30,12 +31,12 @@ RawTooltipContent.displayName = RawTooltipPrimitive.Content.displayName
 const Tooltip = React.forwardRef<
     React.ElementRef<typeof RawTooltipContent>,
     React.ComponentPropsWithoutRef<typeof RawTooltipContent> & {
-        tips: string,
+        tips: React.ReactNode,
     }
 >(({ children, tips, ...props }, ref) => (
     <RawTooltipProvider>
         <RawTooltip>
-            <RawTooltipTrigger >
+            <RawTooltipTrigger className={DefaultText} >
                 {children}
             </RawTooltipTrigger>
             <RawTooltipContent {...props} ref={ref} >{tips}</RawTooltipContent>

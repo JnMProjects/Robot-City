@@ -27,7 +27,8 @@
       "@Sui/*": ["./src/components/story/ui/*"],
       "@Slay/*": ["./src/components/story/layout/*"],
       "@load/*":  ["./src/components/ui/loaders/*"],
-      "@pre/*": ["./src/components/presets/*"]
+      "@pre/*": ["./src/components/presets/*"],
+      "@fx/*": ["./src/components/effects/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/layout/index.tsx", "src/components/ui/index.tsx", "**/*.mdx", "**/*.stories.tsx"],

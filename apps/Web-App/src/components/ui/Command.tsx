@@ -7,7 +7,7 @@ import { Search } from "react-feather"
 
 import { cn } from "@components/twm"
 import { Dialog, DialogWrapper } from "@layout/Dialog"
-import { Popup } from "@layout/Popup"
+import { Preset } from "@layout/Popup"
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
@@ -44,11 +44,11 @@ const asDialog = ({ children, trigger, triggervariant, ...props }: CommandDialog
 
 const asPopup = ({ children, trigger, triggervariant, ...props}: CommandDialogProps) => {
   return (
-    <Popup trigger={trigger} triggervariant={triggervariant}>
+    <Preset trigger={trigger} triggervariant={triggervariant}>
       <Command passthrough className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium duration-700 [&_[cmdk-group-heading]]:text-l-prim dark:[&_[cmdk-group-heading]]:text-d-prim [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
             {children}
       </Command>
-    </Popup>
+    </Preset>
   )
 }
 

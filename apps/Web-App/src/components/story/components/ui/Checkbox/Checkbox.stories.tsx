@@ -29,7 +29,7 @@ export const Default = () => {
     );
 }
 
-export const Unchecked = () => {
+const UncheckedPre = () => {
     const [checked, setChecked] = React.useState(false);
     return (
         <Checkbox checked={checked} onCheckedChange={() => setChecked(!checked)}>
@@ -37,8 +37,9 @@ export const Unchecked = () => {
         </Checkbox>
     );
 }
+export const Unchecked = () => {return <UncheckedPre />}
 
-export const Intermediate = () => {
+const IntermediatePre = () => {
     const [checked, setChecked] = React.useState<"true" | "intermediate" | "false">("intermediate");
     let hardCheck = checked !== "false";
     return (
@@ -61,7 +62,9 @@ export const Intermediate = () => {
     );
 }
 
-export const Checked = () => {
+export const Intermediate = () => {return <IntermediatePre />}
+
+const CheckedPre = () => {
     const [checked, setChecked] = React.useState(true);
     return (
         <Checkbox checked={checked} onCheckedChange={() => setChecked(!checked)}>
@@ -70,7 +73,9 @@ export const Checked = () => {
     );
 }
 
-export const Disabled = () => {
+export const Checked = () => {return <CheckedPre />}
+
+const DisabledPre = () => {
     const [checked, setChecked] = React.useState<"true" | "intermediate" | "false">("true");
     let hardCheck = checked !== "false";
     return (
@@ -100,7 +105,9 @@ export const Disabled = () => {
     );
 }
 
-export const PlayAround = () => {
+export const Disabled = () => {return <DisabledPre />}
+
+const PlayAroundPre = () => {
     const [checked, setChecked] = React.useState<"true" | "intermediate" | "false">("true");
     let hardCheck = checked !== "false";
     return (
@@ -128,3 +135,5 @@ export const PlayAround = () => {
         </>
     );
 }
+
+export const PlayAround = () => {return <PlayAroundPre />}

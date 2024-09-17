@@ -22,6 +22,7 @@ const BadgeVariants = cva(
                 owarning: " bg-system-warning/40 text-l-acc-900/80 dark:bg-system-warning-dark/40 dark:text-d-acc-400/80",
                 info: " bg-sky-400 text-indigo-600 dark:bg-sky-600 dark:text-cyan-400",
                 oinfo: " bg-sky-500/40 text-blue-700/80 dark:bg-sky-600/40 dark:text-cyan-400/80",
+                nothing: "",
             },
             size: {
                 sm: " rounded-xl py-1 px-2 font-normal",

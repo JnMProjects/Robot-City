@@ -19,3 +19,5 @@ export const DefaultWrapper: string = `${oxanium.variable} ${bungeeSpice.variabl
 
 
 export const DefaultText: string = `font-oxanium text-l-txt dark:text-d-txt duration-700`
+
+export const DefaultHeader: string = `font-bungee-spice text-l-txt dark:text-d-txt duration-700 mb-4 text-2xl font-bold`

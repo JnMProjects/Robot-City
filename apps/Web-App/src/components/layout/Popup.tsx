@@ -11,7 +11,7 @@ const Popover = PopoverPrimitive.Root
 
 const PopoverTrigger = React.forwardRef<
 React.ElementRef<typeof PopoverPrimitive.Trigger>,
-React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Trigger> & { variant?: "primary" | "secondary" | "tertiary" | "soft" | "text"
+React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Trigger> & { variant?: "primary" | "secondary" | "tertiary" | "soft" | "text" | "nothing"
     prefix?: keyof typeof Feather
 }
 >(({ className, children,variant, prefix, ...props }, ref) => (
@@ -61,4 +61,5 @@ const Popup: React.FC<React.ComponentProps<typeof Popover> & {
   )
 }
 
-export { Popup }
+export { Popup as Preset, Popover as Wrapper, PopoverTrigger as Trigger, PopoverContent as Content }
+ 
