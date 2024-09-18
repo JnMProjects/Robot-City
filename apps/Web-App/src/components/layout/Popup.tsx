@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as PopoverPrimitive from "@radix-ui/react-popover"
-import { Button } from "@ui/."
+import { Button } from "@ui/Button"
 import * as Feather from "react-feather"
 
 import { cn } from "../twm"

@@ -1,4 +1,4 @@
-import { StatusDot } from "@ui/index";
+import { StatusDot } from "@ui/StatusDot";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof StatusDot> = {

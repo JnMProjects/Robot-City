@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 
-import { Tooltip } from "@layout/index";
+import { Tooltip } from "@layout/Tooltip";
 import React from "react";
 import { cva } from "cva";
 import { cn } from "../twm";

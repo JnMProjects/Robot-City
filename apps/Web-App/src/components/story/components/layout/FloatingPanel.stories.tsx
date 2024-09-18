@@ -47,7 +47,7 @@ export function FloatingPanelExample1() {
   )
 }
 import * as Toggle from "@ui/Toggle"
-import { Tooltip } from "@/components/layout"
+import { Tooltip } from "@layout/Tooltip"
 import React from "react"
 import { Toaster } from "@/components/ui/Toast"
 import { toast } from "sonner"
@@ -68,7 +68,7 @@ function FloatingPanelExample2Pre() {
           <Toggle.Group 
             type="single" 
             value={value} 
-            onValueChange={(value) => {
+            onValueChange={(value: React.SetStateAction<string>) => {
               if (value) setValue(value);
             }}>
             <Toggle.Item value="5">❤</Toggle.Item>

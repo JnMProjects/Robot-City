@@ -2,6 +2,7 @@
   "name": "noplus-web",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "yarn@4.5.0",
   "scripts": {
     "dev": "concurrently -k \"npm:dev:*\"",
     "dev:next": "next dev",
@@ -50,7 +51,7 @@
     "cmdk": "^1.0.0",
     "cva": "^1.0.0-beta.1",
     "date-fns": "^3.5.0",
-    "firebase": "^10.11.1",
+    "firebase": "^10.13.1",
     "framer-motion": "^11.5.4",
     "gsap": "^3.12.5",
     "input-otp": "^1.2.4",
@@ -61,7 +62,7 @@
     "node-fetch": "^3.3.2",
     "octokit": "^3.2.1",
     "prettier": "^3.2.5",
-    "react": "18.3.1",
+    "react": "^18.3.1",
     "react-day-picker": "^8.10.0",
     "react-dom": "^18",
     "react-feather": "^2.0.10",
@@ -75,7 +76,8 @@
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.168.0",
     "ts-node": "^10.9.2",
-    "vaul": "^0.9.0"
+    "vaul": "^0.9.0",
+    "webpack": "^5.94.0"
   },
   "paths": {
     "@public/*": [

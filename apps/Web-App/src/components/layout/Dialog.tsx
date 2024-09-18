@@ -6,7 +6,7 @@ import * as RawDialogPrimitive from "@radix-ui/react-dialog"
 import { X } from "react-feather"
 
 import { cn } from "../twm"
-import { Button } from "@ui/."
+import { Button } from "@ui/Button"
 
 // ALERT DIALOG
 

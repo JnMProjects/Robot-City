@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { AspectRatio } from "@layout/index";
+import { AspectRatio } from "@layout/AspectRatio";
 import Image from "next/image";
 import React from "react";
 

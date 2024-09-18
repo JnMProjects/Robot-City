@@ -202,7 +202,7 @@ export function ColorPicker({
             min="0"
             max="360"
             value={hsl[0]}
-            onChange={(e) => handleHueChange(Number(e.target.value))}
+            onChange={(e: { target: { value: any } }) => handleHueChange(Number(e.target.value))}
             className="w-full h-3 rounded-full appearance-none cursor-pointer"
             style={{
               background: `linear-gradient(to right, 

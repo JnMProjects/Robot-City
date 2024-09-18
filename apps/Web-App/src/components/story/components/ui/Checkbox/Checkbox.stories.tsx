@@ -1,5 +1,6 @@
 import { Meta } from "@storybook/react";
-import { Checkbox, Button } from "@ui/index";
+import { Checkbox } from "@ui/Checkbox";
+import { Button } from "@ui/Button";
 import React from "react";
 
 const meta: Meta = {

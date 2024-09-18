@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { ModalDialog, ModalDialogWrapper, Dialog, DialogWrapper } from "@layout/.";
-import { Badge } from "@ui/.";
+import { ModalDialog, ModalDialogWrapper, Dialog, DialogWrapper } from "@layout/Dialog";
+import { Badge } from "@ui/Badge";
 
 
 const meta: Meta = {
